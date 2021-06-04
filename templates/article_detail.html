@@ -6,6 +6,7 @@
 <div class="article-entry">
     <h2>{{ article.title }}</h2>
     <p>by {{ article.author }} | {{ article.date }}</p>
+    <img class="card-img-top" src="{{ article.cover.url}}" alt="{{ article.title }}">
     <p>{{ article.body }}</p>
 </div>
 <p>

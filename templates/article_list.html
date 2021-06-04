@@ -3,6 +3,7 @@
 {% block title %}Articles{% endblock title %}
 
 {% block content %}
+
 <!--If articles doesn't exit statement-->
 {% for article in object_list %}
     <div class="card">
@@ -11,6 +12,8 @@
             <span class="text-muted">by {{ article.author }} | {{ article.date }}</span>
         </div>
         <div class="card-body">
+            <img class="card-img-top" src="{{ article.cover.url}}" alt="{{ article.title }}">
+            <br>
             <p>{{ article.body }}</p>
         </div>
         <div class="card-footer text-center text-muted">
